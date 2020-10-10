@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+body{
+    font-family: "Montserrat", sans-serif; 
+    transition: all ease 1600ms;
+    background-image: url('./media/download.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color:white;
+    text-transform: uppercase
+}
+.l {
+    background-color: aqua;
+}
+.overlay{
+    position: absolute;
+    width : 100%;
+    height : 100%;
+    top:0;
+    bottom : 0;
+    background-color: rgba(24, 23, 23, 0.7);
+}
+.header {
+    margin-top : 5%;
+}
+.header1 {
+    margin-top : 5%;
+}
+.textl {
+    background-color: rgb(43, 43, 202);
+    border-radius: 25px;
+    transition: all ease 600ms;
+    color: white
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.temp{
+    font-size : 100px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.textl:hover {
+    background-color : whitesmoke;
+    box-shadow: black;
 }
-
-.App-link {
-  color: #61dafb;
+.textar {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+    color : white;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.span{
+    font-size: 50px;
+}
+.weather {
+    text-align : right;
+}
+.weather2 {
+    text-align:left;
+}
+@media screen and (max-width : 720px){
+    .weather {
+        text-align: center
+    }
+    .weather2 {
+        text-align : center
+    }
+    .temp {
+        font-size : 50px;
+    }
 }
