@@ -20,7 +20,7 @@ class App extends React.Component {
     try{
       if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition((position) => {
-          Axios.get(`http://api.weatherstack.com/current?access_key=bac872bae68d49814d6493b91fd8182c&query=${position.coords.latitude},${position.coords.longitude}`).then((res) => {
+          Axios.get(`http://api.weatherstack.com/current?access_key={YOUR_API_KEY}&query=${position.coords.latitude},${position.coords.longitude}`).then((res) => {
             console.log(res);
             let weather_data = {
               temperature : res.data.current.temperature,
@@ -52,7 +52,7 @@ class App extends React.Component {
   }
   handleclick2(){
     try{
-      Axios.get(`http://api.weatherstack.com/current?access_key=bac872bae68d49814d6493b91fd8182c&query=${this.state.search}`).then((res)=>{
+      Axios.get(`http://api.weatherstack.com/current?access_key={YOUR_API_KEY}&query=${this.state.search}`).then((res)=>{
         try{
           let weather_data = {
               temperature : res.data.current.temperature,
@@ -67,7 +67,7 @@ class App extends React.Component {
           this.setState({data : weather_data,loading:false});
         }
         catch(e){
-          Axios.get(`http://api.weatherstack.com/current?access_key=bac872bae68d49814d6493b91fd8182c&query=bangalore`).then((res)=>{
+          Axios.get(`http://api.weatherstack.com/current?access_key={YOUR_API_KEY}&query=bangalore`).then((res)=>{
 
           let weather_data = {
             temperature : 'not found',
